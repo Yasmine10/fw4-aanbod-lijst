@@ -1,0 +1,33 @@
+@use 'sass:map';
+@use 'fonts' as *;
+
+body {
+  font-family: "Century Gothic", sans-serif;
+  color: var(--clr-txt-primary);
+  line-height: 1.5;
+}
+
+.h1 {
+  font-family: "Century Gothic", sans-serif;
+  font-size: map.get($font-sizes, 'h1');
+  line-height: 1.2;
+  text-align: center;
+}
+
+.h2 {
+  font-family: "Century Gothic", sans-serif;
+  font-size: map.get($font-sizes, 'h2');
+  font-weight: bold;
+  line-height: 1.5;
+  color: var(--clr-txt-primary);
+}
+
+.h3 {
+  font-family: "Century Gothic Bold Italic", sans-serif;
+  font-size: map.get($font-sizes, 'h3');
+  font-weight: bold;
+  font-style: normal;
+  line-height: 1.333;
+  text-transform: uppercase;
+  color: var(--clr-txt-accent);
+}

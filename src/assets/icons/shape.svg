@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="8px" height="5px" viewBox="0 0 8 5" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>Shape</title>
+    <g id="Aanbod-Lijst" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round">
+        <g transform="translate(-1369.000000, -68.000000)" id="Zoekfunctie" stroke="#252526" stroke-width="2">
+            <g transform="translate(0.000000, 32.000000)">
+                <g id="Sort" transform="translate(1192.000000, 12.000000)">
+                    <polyline id="Shape" points="178 25 181 28 184 25"></polyline>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
