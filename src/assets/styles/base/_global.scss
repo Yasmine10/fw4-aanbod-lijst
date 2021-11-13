@@ -1,6 +1,6 @@
 /* util classes */
 
 .container {
-  width: 80%;
+  width: Min(92.5%, 90rem);   // 1440px
   margin: 0 auto;
 }

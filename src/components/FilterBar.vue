@@ -5,24 +5,38 @@
 				<label class="select-label">Type</label>
 				<select>
 					<option>Alle types</option>
+					<option>Huis</option>
+					<option>Charmant huis</option>
+					<option>Appartement</option>
+					<option>Boerderij</option>
 				</select>
 			</div>
 			<div class="select-group">
 				<label class="select-label">Gemeente</label>
 				<select>
 					<option>Selecteer gemeente</option>
+					<option>Putte</option>
+					<option>Heist-op-den-berg</option>
+					<option>Schriek</option>
 				</select>
 			</div>
 			<div class="select-group">
 				<label class="select-label">Slaapkamers</label>
 				<select>
 					<option>Aantal slaapkamers</option>
+					<option>1</option>
+					<option>2</option>
+					<option>3</option>
+					<option>4</option>
+					<option>5</option>
 				</select>
 			</div>
 			<div class="select-group">
 				<label class="select-label">Sorteren</label>
 				<select>
 					<option>Meest recent</option>
+					<option>Laagste prijs eerst</option>
+					<option>Hoogste prijs eerst</option>
 				</select>
 			</div>
 		</div>
@@ -46,16 +60,10 @@ export default {
 	margin-block: 1rem;
 	padding-block: 0.5rem 1rem;
 	
-	
-	
 	&__container {
 		display: flex;
 		flex-direction: column;
 		gap: 0.5rem;
-		
-		@include mq(tablet) {
-		
-		}
 		
 		@include mq(desktop) {
 			flex-direction: row;
@@ -65,12 +73,6 @@ export default {
 					margin-left: auto;
 				}
 			}
-		}
-		
-		
-		
-		.select-label {
-		
 		}
 	}
 }

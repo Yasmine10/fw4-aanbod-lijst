@@ -1,0 +1,43 @@
+.select-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.select-label {
+  font-family: "Typold Bold";
+  font-size: 10px;
+  line-height: 1.4;
+  text-transform: uppercase;
+  color: var(--clr-txt-accent);
+  position: relative;
+  top: 6px;
+  margin-left: 10px;
+}
+
+
+select {
+  padding: 0.75rem 1rem 0.5rem 1rem;
+  background-color: var(--clr-bg);
+  border: none;
+
+  font-family: "Typold Regular", sans-serif;
+  font-size: 14px;
+  line-height: 1.714;
+  color: var(--clr-txt-primary);
+
+  &:focus {
+    //border: none;
+  }
+
+  &:focus-visible {
+    outline: 1px solid var(--clr-txt-accent);
+  }
+
+  & > option {
+    font-family: "Typold Regular", sans-serif;
+    font-size: 14px;
+    background-color: var(--clr-bg);
+    color: var(--clr-txt-primary);
+    border: none;
+  }
+}
