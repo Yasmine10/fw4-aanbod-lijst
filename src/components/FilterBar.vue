@@ -2,32 +2,32 @@
 	<div class="filters">
 		<div class="filters__container container">
 			<div class="select-group">
-				<label class="select-label">Type</label>
-				<select v-model="types.selectedType">
+				<label for="types" class="select-label">Type</label>
+				<select id="types" name="types" v-model="types.selectedType">
 					<option value="Alle types">Alle types</option>
 					<option v-for="(type, index) in types.list" :key="index" :value="type">{{ type }}</option>
 				</select>
 				<div class="custom-arrow"></div>
 			</div>
 			<div class="select-group">
-				<label class="select-label">Gemeente</label>
-				<select v-model="locations.selectedLocation">
+				<label for="locations" class="select-label">Gemeente</label>
+				<select id="locations" name="locations" v-model="locations.selectedLocation">
 					<option value="Selecteer gemeente">Selecteer gemeente</option>
 					<option v-for="(location, index) in locations.list" :key="index" :value="location">{{ location }}</option>
 				</select>
 				<div class="custom-arrow"></div>
 			</div>
 			<div class="select-group">
-				<label class="select-label">Slaapkamers</label>
-				<select v-model="bedrooms.selectedBedroomNr">
+				<label for="bedrooms" class="select-label">Slaapkamers</label>
+				<select id="bedrooms" name="bedrooms" v-model="bedrooms.selectedBedroomNr">
 					<option value="Aantal slaapkamers">Aantal slaapkamers</option>
 					<option v-for="(bedroomNr, index) in bedrooms.list" :key="index" :value="bedroomNr">{{ bedroomNr }}</option>
 				</select>
 				<div class="custom-arrow"></div>
 			</div>
 			<div class="select-group">
-				<label class="select-label">Sorteren</label>
-				<select v-model="sortingOptions.selectedOption">
+				<label for="sortingOptions" class="select-label">Sorteren</label>
+				<select id="sortingOptions" name="sortingOptions" v-model="sortingOptions.selectedOption">
 					<option v-for="(option, index) in sortingOptions.list" :key="index" :value="option">{{ option }}</option>
 				</select>
 				<div class="custom-arrow"></div>

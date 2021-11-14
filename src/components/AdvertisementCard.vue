@@ -25,9 +25,10 @@ export default {
 </script>
 
 <style scoped lang="scss">
-
+@use 'sass:map';
 @use '../assets/styles/abstracts/mixins' as *;
 @use '../assets/styles/abstracts/variables' as *;
+@use '../assets/styles/base/fonts' as *;
 
 .card {
 	display: flex;
@@ -39,26 +40,19 @@ export default {
 	
 	color: var(--clr-bg);
 	
-	
-	
-	&:hover {
-		transform: scale(1.02);
-		box-shadow: $box-shadow;
-	}
-	
-	&:nth-child(1) {
-		background-color: var(--clr-txt-accent);
-	}
-	
-	&:nth-child(2) {
-		background-color: var(--clr-txt-primary);
-	}
-	
 	&__text {
 		margin-top: auto;
 		
-		font-size: 28px;
+		font-size: 20px;
 		line-height: 1.429;
+		
+		@include mq(tablet) {
+			font-size: 24px;
+		}
+		
+		@include mq(desktop) {
+			font-size: map.get($font-sizes, 'fs-28pt');
+		}
 	}
 	
 	&__icon img {

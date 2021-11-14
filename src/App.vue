@@ -1,11 +1,15 @@
 <template>
 	<div>
-		<FilterBar />
-		<h1 class="h1">Aanbod te koop</h1>
-		<section class="card-container container" >
-			<HouseCard v-for="(item, index) in items" :key="item.id" :style="{'grid-area': 'card'+ (index+1)}" :item="item"></HouseCard>
-			<AdvertisementCard v-for="(add, index) in adds" :key="add.id" :style="{'grid-area': 'add'+(index+1)}" :item="add" :class="'add'+(index+1)"></AdvertisementCard>
-		</section>
+		<header>
+			<FilterBar />
+		</header>
+		<main>
+			<h1 class="h1">Aanbod te koop</h1>
+			<section class="card-container container" >
+				<HouseCard v-for="(item, index) in items" :key="item.id" :style="{'grid-area': 'card'+ (index+1)}" :item="item"></HouseCard>
+				<AdvertisementCard v-for="(add, index) in adds" :key="add.id" :style="{'grid-area': 'add'+(index+1)}" :item="add" :class="'add'+(index+1)"></AdvertisementCard>
+			</section>
+		</main>
 	</div>
 </template>
 
@@ -73,7 +77,7 @@ export default {
 		grid-template-areas:
 			"card1 card2"
 			"card3 add1"
-			"card4 add2"
+			"add2 card4"
 			"card5 card6"
 			"card7 ...";
 	}
