@@ -1,11 +1,11 @@
-const type = {
+export const type = {
     HOUSE: "Huis",
     CHARMINGHOUSE: "Charmant huis",
     APPARTMENT: "Appartement",
     FARM: "Boerderij",
 }
 
-const data = [
+export const data = [
     {
         id: 1,
         img: "IMG-2.jpg",
@@ -70,5 +70,3 @@ const data = [
         area: "49.780",
     }
 ]
-
-export default data;
