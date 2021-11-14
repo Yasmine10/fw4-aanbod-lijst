@@ -10,6 +10,7 @@
 					<option>Appartement</option>
 					<option>Boerderij</option>
 				</select>
+				<div class="custom-arrow"></div>
 			</div>
 			<div class="select-group">
 				<label class="select-label">Gemeente</label>
@@ -19,6 +20,7 @@
 					<option>Heist-op-den-berg</option>
 					<option>Schriek</option>
 				</select>
+				<div class="custom-arrow"></div>
 			</div>
 			<div class="select-group">
 				<label class="select-label">Slaapkamers</label>
@@ -30,6 +32,7 @@
 					<option>4</option>
 					<option>5</option>
 				</select>
+				<div class="custom-arrow"></div>
 			</div>
 			<div class="select-group">
 				<label class="select-label">Sorteren</label>
@@ -38,6 +41,7 @@
 					<option>Laagste prijs eerst</option>
 					<option>Hoogste prijs eerst</option>
 				</select>
+				<div class="custom-arrow"></div>
 			</div>
 		</div>
 	</div>
@@ -56,9 +60,10 @@ export default {
 .filters {
 	display: flex;
 	
-	background-color: var(--clr-bg-filters);
 	margin-block: 1rem;
 	padding-block: 0.5rem 1rem;
+	
+	background-color: var(--clr-bg-filters);
 	
 	&__container {
 		display: flex;
