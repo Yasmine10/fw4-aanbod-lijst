@@ -7,9 +7,12 @@
 				<p class="card__price h2">&euro; {{ item.price }}</p>
 			</div>
 			<h3 class="card__type h3">{{ item.type }}</h3>
-			<div style="margin-top: 1.25rem; ">
+			<div class="card__info">
 				<p class="card__bedroomsNr"><img :src="slpkIcon" alt="" /> {{ item.bedroomsNr }}</p>
-				<p class="card__area"><img :src="perceelIcon" alt="" />  <span>{{ item.area }} m<sup>2</sup></span></p>
+				<div class="card__area">
+					<img class="icon" :src="perceelIcon" alt="" />
+					<p>{{ item.area }} m<sup>2</sup></p>
+				</div>
 			</div>
 		</div>
 	</div>
@@ -43,6 +46,18 @@ export default {
 
 .card {
 	
+	&:nth-child(2n) {
+		.card__info {
+			display: flex;
+			flex-direction: row-reverse;
+			justify-content: flex-start;
+		}
+		
+		.card__area {
+		
+		}
+	}
+	
 	&__content {
 		display: flex;
 		flex-direction: column;
@@ -59,13 +74,27 @@ export default {
 		padding-bottom: 0.25em;
 	}
 	
+	&__info {
+		margin-top: 1.25rem;
+		display: flex;
+		//flex-direction: row;
+		//justify-content: flex-start;
+		gap: 1.5rem;
+	}
+	
 	&__bedroomsNr, &__area {
-		display: inline-flex;
+		display: flex;
 		gap: 0.5rem;
 	}
 	
 	&__bedroomsNr {
-		margin-right: 2rem;
+		//margin-right: 2rem;
+	}
+	
+	&__area .icon {
+		width: 20px;
+		//width: 4rem;
+		//display: flex;
 	}
 }
 

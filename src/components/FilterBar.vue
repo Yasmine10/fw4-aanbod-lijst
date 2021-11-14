@@ -20,7 +20,7 @@
 			<div class="select-group">
 				<label for="bedrooms" class="select-label">Slaapkamers</label>
 				<select id="bedrooms" name="bedrooms" v-model="bedrooms.selectedBedroomNr">
-					<option value="Aantal slaapkamers">Aantal slaapkamers</option>
+					<option value="Aantal slaapkamers">Aantal kamers</option>
 					<option v-for="(bedroomNr, index) in bedrooms.list" :key="index" :value="bedroomNr">{{ bedroomNr }}</option>
 				</select>
 				<div class="custom-arrow"></div>
@@ -88,8 +88,9 @@ export default {
 .filters {
 	display: flex;
 	
-	margin-block: 1rem;
-	padding-block: 0.5rem 1rem;
+	margin-top: 2rem;
+	margin-bottom: 1rem;
+	padding-block: 0.375rem 0.75rem;
 	
 	background-color: var(--clr-bg-filters);
 	

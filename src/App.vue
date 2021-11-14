@@ -51,7 +51,7 @@ export default {
 @use './assets/styles/abstracts/variables' as *;
 
 .h1 {
-	margin-block: 1em;
+	margin-block: 2rem 3rem;
 }
 
 .card-container {
