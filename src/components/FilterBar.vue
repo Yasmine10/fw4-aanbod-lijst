@@ -3,43 +3,32 @@
 		<div class="filters__container container">
 			<div class="select-group">
 				<label class="select-label">Type</label>
-				<select>
-					<option>Alle types</option>
-					<option>Huis</option>
-					<option>Charmant huis</option>
-					<option>Appartement</option>
-					<option>Boerderij</option>
+				<select v-model="types.selectedType">
+					<option value="Alle types">Alle types</option>
+					<option v-for="(type, index) in types.list" :key="index" :value="type">{{ type }}</option>
 				</select>
 				<div class="custom-arrow"></div>
 			</div>
 			<div class="select-group">
 				<label class="select-label">Gemeente</label>
-				<select>
-					<option>Selecteer gemeente</option>
-					<option>Putte</option>
-					<option>Heist-op-den-berg</option>
-					<option>Schriek</option>
+				<select v-model="locations.selectedLocation">
+					<option value="Selecteer gemeente">Selecteer gemeente</option>
+					<option v-for="(location, index) in locations.list" :key="index" :value="location">{{ location }}</option>
 				</select>
 				<div class="custom-arrow"></div>
 			</div>
 			<div class="select-group">
 				<label class="select-label">Slaapkamers</label>
-				<select>
-					<option>Aantal slaapkamers</option>
-					<option>1</option>
-					<option>2</option>
-					<option>3</option>
-					<option>4</option>
-					<option>5</option>
+				<select v-model="bedrooms.selectedBedroomNr">
+					<option value="Aantal slaapkamers">Aantal slaapkamers</option>
+					<option v-for="(bedroomNr, index) in bedrooms.list" :key="index" :value="bedroomNr">{{ bedroomNr }}</option>
 				</select>
 				<div class="custom-arrow"></div>
 			</div>
 			<div class="select-group">
 				<label class="select-label">Sorteren</label>
-				<select>
-					<option>Meest recent</option>
-					<option>Laagste prijs eerst</option>
-					<option>Hoogste prijs eerst</option>
+				<select v-model="sortingOptions.selectedOption">
+					<option v-for="(option, index) in sortingOptions.list" :key="index" :value="option">{{ option }}</option>
 				</select>
 				<div class="custom-arrow"></div>
 			</div>
@@ -48,8 +37,47 @@
 </template>
 
 <script>
+import { type } from '@/assets/data';
+
 export default {
-	name: "FilterBar"
+	name: "FilterBar",
+	data() {
+		return {
+			types: {
+				list: type,
+				selectedType: "",
+			},
+			locations: {
+				list: [
+					"Putte",
+					"Heist-op-den-Berg",
+					"Schriek",
+				],
+				selectedLocation: "",
+			},
+			bedrooms: {
+				list: [
+					2, 3,
+				],
+				selectedBedroomNr: "",
+			},
+			sortingOptions: {
+				list: [
+					"Meest recent",
+					"Prijs van laag naar hoog",
+					"Prijs van hoog naar laag",
+				],
+				selectedOption: ""
+			}
+		}
+	},
+	created() {
+		this.types.selectedType = "Alle types";
+		this.locations.selectedLocation = "Selecteer gemeente";
+		this.bedrooms.selectedBedroomNr = "Aantal slaapkamers";
+		this.sortingOptions.selectedOption = this.sortingOptions.list[0];
+	}
+	
 }
 </script>
 
