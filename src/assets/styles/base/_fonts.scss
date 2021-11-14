@@ -1,28 +1,28 @@
 /* font families */
 
 @font-face {
-  font-family: 'Century Gothic';
+  font-family: 'CenturyGothic';
   src: url('~@/assets/fonts/CenturyGothic.ttf') format('truetype');
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
-  font-family: 'Century Gothic Bold Italic';
+  font-family: 'CenturyGothicBoldItalic';
   src: url('~@/assets/fonts/CenturyGothic-BoldItalic.ttf') format('truetype');
   font-weight: bold;
   font-style: normal;
 }
 
 @font-face {
-  font-family: 'Typold Regular';
+  font-family: 'TypoldRegular';
   src: url('~@/assets/fonts/Typold-Regular.otf') format('truetype');
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
-  font-family: 'Typold Bold';
+  font-family: 'TypoldBold';
   src: url('~@/assets/fonts/Typold-Bold.ttf') format('truetype');
   font-weight: bold;
   font-style: normal;
@@ -32,8 +32,10 @@
 /* font sizes */
 
 $font-sizes: (
-  'h1': 2.5rem,     // 40px
-  'h2': 1rem,       // 16px
-  'h3': 0.875rem,   // 12px
-  'text': 1rem,     // 16px
+  'fs-40pt': 2.5rem,
+  'fs-28pt': 1.75rem,
+  'fs-16pt': 1rem,
+  'fs-14pt': 0.875rem,
+  'fs-12pt': 0.75rem,
+  'fs-10pt': 0.625rem,
 );

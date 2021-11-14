@@ -1,6 +1,23 @@
+@use './../abstracts/mixins' as *;
+@use './../abstracts/variables' as *;
+
 /* util classes */
 
 .container {
   width: Min(92.5%, 90rem);   // 1440px
   margin: 0 auto;
+}
+
+/* global classes */
+
+.card {
+  transition: transform 200ms ease-in;
+  @include mq-reduced-motion;
+
+  cursor: pointer;
+
+  &:hover {
+    transform: scale(1.02);
+    box-shadow: $box-shadow;
+  }
 }

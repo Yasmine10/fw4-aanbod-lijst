@@ -1,43 +1,65 @@
+@use 'sass:map';
+@use '../base/fonts' as *;
+
 .select-group {
   display: flex;
   flex-direction: column;
+
+  position: relative;
 }
 
 .select-label {
-  font-family: "Typold Bold";
-  font-size: 10px;
+  position: relative;
+  top: 6px;
+  z-index: 10;
+
+  margin-left: 10px;
+
+  font-family: "TypoldBold", sans-serif;
+  font-size: map.get($font-sizes, 'fs-10pt');
   line-height: 1.4;
   text-transform: uppercase;
   color: var(--clr-txt-accent);
-  position: relative;
-  top: 6px;
-  margin-left: 10px;
 }
 
-
 select {
-  padding: 0.75rem 1rem 0.5rem 1rem;
   background-color: var(--clr-bg);
+  padding: 0.75rem 3rem 0.5rem 1rem;
   border: none;
 
-  font-family: "Typold Regular", sans-serif;
-  font-size: 14px;
+  font-family: "TypoldRegular", sans-serif;
+  font-size: map.get($font-sizes, 'fs-14pt');
   line-height: 1.714;
   color: var(--clr-txt-primary);
 
+  appearance: none;
+
   &:focus {
-    //border: none;
+    border: 1px solid var(--clr-txt-accent);
   }
 
-  &:focus-visible {
-    outline: 1px solid var(--clr-txt-accent);
-  }
+  // setting it as a string because sass doesn't support @supports yet,
+  // this will compile to normal css
+  @supports  #{'\selector(*:focus-visible)'} {
+     &:focus {
+       border: none;
+     }
 
-  & > option {
-    font-family: "Typold Regular", sans-serif;
-    font-size: 14px;
-    background-color: var(--clr-bg);
-    color: var(--clr-txt-primary);
-    border: none;
-  }
+     &:focus-visible {
+       outline: 1px solid var(--clr-txt-accent);
+     }
+ }
+}
+
+.custom-arrow::before {
+  content: url(~@/assets/icons/shape.svg);
+
+  position: absolute;
+  top: 40%;
+  right: -0.5rem;
+
+  width: 35px;
+  height: 80%;
+
+  pointer-events: none;
 }
