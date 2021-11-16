@@ -32,6 +32,7 @@
 - Flexbox
 - CSS Grid
 - Mobile-first workflow
+- Accessibility (Semantic HTML, best practices, @supports)
 
 ### Auteur
 
