@@ -1,24 +1,37 @@
-# fw4-aanbod-lijst
+# FW4 aanbod lijst
 
-## Project setup
-```
-npm install
-```
+## Table of contents
 
-### Compiles and hot-reloads for development
-```
-npm run serve
-```
+- [Overview](#overview)
+- [De opdracht](#de-opdracht)
+- [Screenshot](#screenshot)
+- [Links](#links)
+- [Gemaakt met](#gemaakt-met)
+- [Auteur](#auteur)
 
-### Compiles and minifies for production
-```
-npm run build
-```
+## Overview
 
-### Lints and fixes files
-```
-npm run lint
-```
+### Comments
 
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+- Bij de styling ben ik er van uit gegaan dat het gedeelte met de huizen om een pagina gaat die steeds herhaalt wordt  wanneer er pagina nummers aan toegevoegd zouden worden.
+
+### Screenshot
+
+![Screenshot oplossing](https://github.com/Yasmine10/fw4-aanbod-lijst/blob/master/src/assets/fw4-aanbod-lijst-solution.png?raw=true)
+
+### Links
+
+-   Solution URL: [https://github.com/Yasmine10/fw4-aanbod-lijst](https://github.com/Yasmine10/fw4-aanbod-lijst)
+-   Live Site URL: [https://fw4-aanbod-lijst.vercel.app/](https://fw4-aanbod-lijst.vercel.app/)
+
+### Gemaakt met
+
+- [VueJS](https://vuejs.org) - JS library
+- Sass
+- Flexbox
+- CSS Grid
+- Mobile-first workflow
+
+### Auteur
+
+-   Website - [yasminedewolf.be](https://yasminedewolf.be)
