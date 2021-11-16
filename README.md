@@ -13,6 +13,7 @@
 
 ### Comments
 
+- Ik heb voor Vue gekozen omdat ik hiermee de code beter reusable kon maken.
 - Bij de styling ben ik er van uit gegaan dat het gedeelte met de huizen om een pagina gaat die steeds herhaalt wordt  wanneer er pagina nummers aan toegevoegd zouden worden.
 
 ### Screenshot
