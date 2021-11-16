@@ -8,7 +8,10 @@
 			</div>
 			<h3 class="card__type h3">{{ item.type }}</h3>
 			<div class="card__info">
-				<p class="card__bedroomsNr"><img :src="slpkIcon" alt="" /> {{ item.bedroomsNr }}</p>
+				<div class="card__bedroomsNr">
+					<img :src="slpkIcon" alt="" />
+					<p>{{ item.bedroomsNr }}</p>
+				</div>
 				<div class="card__area">
 					<img v-if="item.id % 2 === 0" class="icon" :src="oppIcon" alt="" />
 					<img v-else class="icon" :src="perceelIcon" alt="" />
@@ -55,10 +58,6 @@ export default {
 			flex-direction: row-reverse;
 			justify-content: flex-end;
 		}
-		
-		.card__area {
-		
-		}
 	}
 	
 	&__content {
@@ -80,24 +79,18 @@ export default {
 	&__info {
 		margin-top: 1.25rem;
 		display: flex;
-		//flex-direction: row;
-		//justify-content: flex-start;
+		align-items: baseline;
 		gap: 1.5rem;
 	}
 	
 	&__bedroomsNr, &__area {
 		display: flex;
+		align-items: stretch;
 		gap: 0.5rem;
 	}
 	
-	&__bedroomsNr {
-		//margin-right: 2rem;
-	}
-	
 	&__area .icon {
-		width: 20px;
-		//width: 4rem;
-		//display: flex;
+		width: 1rem;
 	}
 }
 
