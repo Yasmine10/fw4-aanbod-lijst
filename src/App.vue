@@ -39,7 +39,7 @@ export default {
 					text: "U bent op zoek  naar een eigendom? Blijf op de hoogte van ons nieuwste aanbod!"
 				}
 			]
-		}
+		};
 	},
 }
 </script>

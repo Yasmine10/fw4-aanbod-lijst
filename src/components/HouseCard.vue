@@ -10,7 +10,8 @@
 			<div class="card__info">
 				<p class="card__bedroomsNr"><img :src="slpkIcon" alt="" /> {{ item.bedroomsNr }}</p>
 				<div class="card__area">
-					<img class="icon" :src="perceelIcon" alt="" />
+					<img v-if="item.id % 2 === 0" class="icon" :src="oppIcon" alt="" />
+					<img v-else class="icon" :src="perceelIcon" alt="" />
 					<p>{{ item.area }} m<sup>2</sup></p>
 				</div>
 			</div>
@@ -23,6 +24,7 @@ import {imagePath} from '@/mixins/imagePath';
 
 import SlpkIcon from '../assets/icons/slpk.svg';
 import PerceelIcon from '../assets/icons/perceel.svg';
+import OppIcon from '../assets/icons/opp.svg';
 
 export default {
 	name: "HouseCard",
@@ -37,6 +39,7 @@ export default {
 		return {
 			slpkIcon: SlpkIcon,
 			perceelIcon: PerceelIcon,
+			oppIcon: OppIcon,
 		}
 	},
 }
@@ -50,7 +53,7 @@ export default {
 		.card__info {
 			display: flex;
 			flex-direction: row-reverse;
-			justify-content: flex-start;
+			justify-content: flex-end;
 		}
 		
 		.card__area {
