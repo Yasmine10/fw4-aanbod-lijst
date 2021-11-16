@@ -11,7 +11,7 @@
 			</div>
 			<div class="select-group">
 				<label for="locations" class="select-label">Gemeente</label>
-				<select id="location" v-model="selectedLocation">
+				<select id="locations" v-model="selectedLocation">
 					<option name="location" value="Selecteer gemeente">Selecteer gemeente</option>
 					<option name="location" v-for="(location, index) in locations" :key="index" :value="location">{{ location }}</option>
 				</select>
