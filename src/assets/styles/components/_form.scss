@@ -40,7 +40,7 @@ select {
 
   // setting it as a string because sass doesn't support @supports yet,
   // this will compile to normal css
-  @supports  #{'\selector(*:focus-visible)'} {
+  @supports #{'\selector(*:focus-visible)'} {
      &:focus {
        border: none;
      }
